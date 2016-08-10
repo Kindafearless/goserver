@@ -1,3 +1,3 @@
-FROM ubuntu
-ADD . goserver
-ENTRYPOINT chmod +x ./goserver
+FROM alpine
+COPY ./goserver .
+ENTRYPOINT ["./goserver"]
