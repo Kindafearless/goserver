@@ -7,7 +7,7 @@ import (
     "net/http"
 )
 
-func routingActions(w http.ResponseWriter, r *http.Request){
+func RoutingActions(w http.ResponseWriter, r *http.Request){
     r.ParseForm()  // parse arguments, you have to call this by yourself
 
     // Print information to browser and stdout
@@ -37,7 +37,7 @@ func main() {
     fmt.Println("Initializing Server...")
 
     // Retrieving url path and printing it after hello
-    http.HandleFunc("/", routingActions)
+    http.HandleFunc("/", RoutingActions)
 
     // Serving at port 8080
     go func() {
